@@ -10,6 +10,11 @@ export default class BookResolver {
     return await new BookService().listBooks();
   }
 
+  @Query(() => Book)
+  async findBook(@Arg("id") id: string) {
+    return await new BookService().findBook(id);
+  }
+
   @Mutation(() => Book)
   async createBook(@Arg("infos") infos: InputCreateBook) {
     const newBook = await new BookService().createBook(infos);
