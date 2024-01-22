@@ -1,9 +1,9 @@
-import assert from 'assert';
-import Book from '../src/entities/book.entity';
-import BookResolver from '../src/resolvers/book.resolver';
-import { addMocksToSchema } from '@graphql-tools/mock';
-import { ApolloServer } from '@apollo/server';
-import { buildSchemaSync } from 'type-graphql';
+import assert from "assert";
+import Book from "../src/entities/book.entity";
+import BookResolver from "../src/resolvers/book.resolver";
+import { addMocksToSchema } from "@graphql-tools/mock";
+import { ApolloServer } from "@apollo/server";
+import { buildSchemaSync } from "type-graphql";
 
 export const LIST_BOOKS = `#graphql
     query Books {
@@ -54,9 +54,6 @@ beforeAll(async () => {
     Query: {
       books() {
         return booksData;
-      },
-      findBook(_: any, args: { id: string }) {
-        return booksData.find((b) => b.id == args.id);
       },
     },
   };
