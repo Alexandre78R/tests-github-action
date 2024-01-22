@@ -1,9 +1,9 @@
-import { buildSchemaSync } from "type-graphql";
-import BookResolver from "../src/resolvers/book.resolver";
-import { ApolloServer } from "@apollo/server";
-import Book from "../src/entities/book.entity";
-import { addMocksToSchema } from "@graphql-tools/mock";
-import assert from "assert";
+import assert from 'assert';
+import Book from '../src/entities/book.entity';
+import BookResolver from '../src/resolvers/book.resolver';
+import { addMocksToSchema } from '@graphql-tools/mock';
+import { ApolloServer } from '@apollo/server';
+import { buildSchemaSync } from 'type-graphql';
 
 export const LIST_BOOKS = `#graphql
     query Books {
