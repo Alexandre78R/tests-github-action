@@ -23,6 +23,7 @@ export default class BookResolver {
   @Mutation(() => Book)
   async createBook(@Arg("infos") infos: InputCreateBook) {
     const newBook = await new BookService().createBook(infos);
+    console.log('%c⧭', 'color: #00e600', newBook);
     return newBook;
   }
 
