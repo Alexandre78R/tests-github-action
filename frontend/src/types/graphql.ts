@@ -87,9 +87,10 @@ export type Query = {
   __typename?: 'Query';
   books: Array<Book>;
   checkResetToken: Message;
-  findBookById: Book;
+  findBook: Book;
   login: Message;
   logout: Message;
+  test: Scalars['Int']['output'];
   users: Array<User>;
 };
 
@@ -99,7 +100,7 @@ export type QueryCheckResetTokenArgs = {
 };
 
 
-export type QueryFindBookByIdArgs = {
+export type QueryFindBookArgs = {
   id: Scalars['String']['input'];
 };
 

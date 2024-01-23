@@ -29,6 +29,11 @@ export const FIND_BOOK_BY_ID = `#graphql
         }
     }
 `;
+export const TEST = `#graphql
+    query Test {
+        test
+    }
+`;
 
 type ResponseData = {
   books: Book[];
@@ -51,22 +56,29 @@ const baseSchema = buildSchemaSync({
 
 beforeAll(async () => {
   const mocks = {
-    Query: {
-      books() {
-        return booksData;
-      },
-    },
+    Int: () => 4,
+    Float: () => 5.2,
+    Boolean: () => true,
   };
 
   const resolvers = () => ({
     Query: {
+      books() {
+        return booksData;
+      },
       findBook(_: any, args: { id: string }) {
         return booksData.find((b) => b.id == args.id);
       },
     },
   });
+
   server = new ApolloServer({
-    schema: addMocksToSchema({ schema: baseSchema, mocks, resolvers }),
+    schema: addMocksToSchema({
+      schema: baseSchema,
+      mocks,
+      resolvers: resolvers as unknown as ReturnType<typeof resolvers> &
+        typeof mocks,
+    }),
   });
 });
 
@@ -100,10 +112,19 @@ describe("Test sur les livres", () => {
         findBookId: "1",
       },
     });
-
     assert(response.body.kind === "single");
     expect(response.body.singleResult.data).toEqual({
       findBook: booksData[0],
+    });
+  });
+
+  it("test number", async () => {
+    const response = await server.executeOperation<ResponseOneBookData>({
+      query: TEST,
+    });
+    assert(response.body.kind === "single");
+    expect(response.body.singleResult.data).toEqual({
+      test: 4,
     });
   });
 });
