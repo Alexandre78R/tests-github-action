@@ -34,6 +34,7 @@ function Topbar() {
           </Link>
           {state.role === "ADMIN" && (
             <Link
+              data-testid="admin-link"
               href="/admin/books"
               className="px-6 py-2 text-black transition duration-700 ease-out bg-white border border-black rounded-lg hover:bg-black hover:border hover:text-white dark:border-white dark:bg-inherit dark:text-white dark:hover:bg-white dark:hover:text-black"
             >
