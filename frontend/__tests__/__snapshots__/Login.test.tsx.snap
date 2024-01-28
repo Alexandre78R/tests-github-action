@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot du composant login 1`] = `
+<div>
+  <main
+    class="flex min-h-screen flex-col items-center justify-between p-24"
+  >
+    <form>
+      <h1
+        class="font-bold text-lg mb-8"
+      >
+        Connexion
+      </h1>
+      <div>
+        <input
+          name="email"
+          placeholder="Indiquez votre email"
+          type="text"
+        />
+      </div>
+      <div>
+        <input
+          name="password"
+          placeholder="Indiquez votre mot de passe"
+          type="password"
+        />
+      </div>
+      <input
+        type="submit"
+      />
+      <div>
+        <span
+          class="text-red-500"
+        />
+        <span
+          class="text-blue-500"
+        >
+          Bienvenue!
+        </span>
+      </div>
+      <a
+        href="/auth/reset"
+      >
+        mot de passe oublié?
+      </a>
+    </form>
+  </main>
+</div>
+`;

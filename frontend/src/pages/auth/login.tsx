@@ -3,7 +3,6 @@ import {
   InputLogin,
   LoginQuery,
   LoginQueryVariables,
-  useLoginLazyQuery,
 } from "@/types/graphql";
 import { useLazyQuery } from "@apollo/client";
 import Link from "next/link";
