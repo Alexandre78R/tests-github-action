@@ -6,10 +6,12 @@ Ce dépôt contient une base de travail sur la branche main, puis l'avancée pet
 
 ## <div style="background-color: #154275; padding: 10px; color: white;">Branches</div>
 
-<!-- - **1-register** ⇒ <link>https://github.com/delbaze/jwt-quete/tree/1-register</link>
-- **2-login** ⇒ <link>https://github.com/delbaze/jwt-quete/tree/2-login</link>
-- **3-register-suite** ⇒ <link>https://github.com/delbaze/jwt-quete/tree/3-register-suite</link>
-- **4-books-create** ⇒ <link>https://github.com/delbaze/jwt-quete/tree/4-books-create</link> -->
+- **1-mock-livres** ⇒ <link>https://github.com/delbaze/tests-quete/tree/1-mock-livres</link>
+- **2-store-livres** ⇒ <link>https://github.com/delbaze/tests-quete/tree/2-store-livres</link>
+- **3-db-livres** ⇒ <link>https://github.com/delbaze/tests-quete/tree/3-db-livres</link>
+- **4-front-1** ⇒ <link>https://github.com/delbaze/tests-quete/tree/4-front-1</link>
+- **5-front-2** ⇒ <link>https://github.com/delbaze/tests-quete/tree/5-front-2</link>
+- **6-front-e2e** ⇒ <link>https://github.com/delbaze/tests-quete/tree/6-front-e2e</link>
 
 
 ## <div style="background-color: #154275; padding: 10px; color: white;">Structure du Projet</div>
