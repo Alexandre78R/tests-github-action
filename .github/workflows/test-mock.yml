@@ -22,3 +22,6 @@ jobs:
 
             - name: 😎 Lancement des tests backend
               run: npm run test:ci
+
+            - name: 😬 Etape demo 
+              run: echo Coucou!
