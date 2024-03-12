@@ -4,6 +4,9 @@ on:
     push:
         branches: ["1-mock-livres"]
 
+defaults:
+    run:
+      working-directory: backend
 
 jobs:
     test:
@@ -15,6 +18,7 @@ jobs:
               uses: actions/checkout@v3
 
             - name: 😒 Installation des dépendances
-              run: |
-                cd backend 
-                npm install
+              run: npm install
+
+            - name: 😎 Lancement des tests backend
+              runs: npm run test:ci
