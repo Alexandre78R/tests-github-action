@@ -16,5 +16,5 @@ jobs:
 
             - name: 😒 Installation des dépendances
               run:
-              cd backend 
-              npm install
+                cd backend 
+                npm install
