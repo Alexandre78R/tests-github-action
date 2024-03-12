@@ -21,4 +21,4 @@ jobs:
               run: npm install
 
             - name: 😎 Lancement des tests backend
-              runs: npm run test:ci
+              run: npm run test:ci
